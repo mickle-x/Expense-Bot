@@ -11,7 +11,7 @@ MONGO_URI = 'mongodb://localhost:27017'
 bot = telebot.TeleBot(TOKEN)
 
 # --- Dummy Web Server (Render 24/7 ke liye zaroori hai) ---
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
