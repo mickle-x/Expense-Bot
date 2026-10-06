@@ -1,4 +1,5 @@
 import telebot
+import certifi
 from pymongo import MongoClient
 import datetime
 from flask import Flask
@@ -26,7 +27,7 @@ server_thread.start()
 # -----------------------------------------------------------
 
 try:
-    client = MongoClient(MONGO_URI)
+    client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
     db = client['telegram_bot_db'] 
     expenses_collection = db['expenses'] 
 except Exception as e:
