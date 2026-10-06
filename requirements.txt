@@ -1,3 +1,5 @@
 pyTelegramBotApi
 pymongo
+pymongo[srv]
 flask
+certifi
