@@ -7,7 +7,7 @@ import os
 
 # 1. Apna Token aur MongoDB URL yahan dalein
 TOKEN = '8855710390:AAF2a9LYiOpmDLuO0rOD10g3n__A4WE8Vh0'
-MONGO_URI ='mongodb+srv://db_rg3960428_db_user:db_B45iB2lfiB6eKWbc@cluster0.mqpqeno.mongodb.net/?appName=Cluster0'
+MONGO_URI ='mongodb+srv://rg3960428_db_user:B45iB2lfiB6eKWbc@cluster0.mqpqeno.mongodb.net/?appName=Cluster0'
 bot = telebot.TeleBot(TOKEN)
 
 # --- Dummy Web Server (Render 24/7 ke liye zaroori hai) ---
