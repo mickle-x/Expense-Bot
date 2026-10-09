@@ -1,5 +1,6 @@
 import telebot
 import certifi
+import time
 from pymongo import MongoClient
 import datetime
 from flask import Flask
@@ -76,4 +77,9 @@ def show_total(message):
     details += f"\n💰 Total Kharcha: ₹{total}"
     bot.reply_to(message, details, parse_mode="Markdown")
 
-bot.polling(none_stop=True)
+while True:
+    try:
+        bot.polling(none_stop=True, timeout=60)
+    except Exception as e:
+        print(f"Network error aaya: {e}. 5 second mein wapas connect kar raha hoon...")
+        time.sleep(5)
